@@ -1,0 +1,19 @@
+.container-days {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+}
+
+.title-day {
+  font-size: 20px;
+  margin-top: 50px;
+  color: rgb(97, 150, 250);
+  font-style: italic;
+}
+
+.days {
+  font-size: 20px;
+  color: rgb(97, 150, 250);
+  font-style: italic;
+}
