@@ -1,19 +1,57 @@
-.container-days {
-  width: 300px;
+.aside-container {
+  background: rgb(160 175 185 / 18%);
+  border-radius: 4px;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  height: 43%;
+  align-items: center;
+}
+
+.container-text {
+  font-style: italic;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #3d75bb;
   display: flex;
   flex-direction: column;
-  height: 500px;
+  background: rgba(209, 220, 227, 0.18);
+  height: 100%;
+  margin: 0;
+  gap: 25px;
+  justify-content: center;
+  align-content: center;
 }
 
-.title-day {
-  font-size: 20px;
-  margin-top: 50px;
-  color: rgb(97, 150, 250);
-  font-style: italic;
+.line {
+  mix-blend-mode: normal;
+  opacity: 0.3;
+  border: 1px solid #5d9cec;
+  width: 90%;
 }
 
-.days {
-  font-size: 20px;
-  color: rgb(97, 150, 250);
+.aside-title {
+  margin: 0;
+  color: #4c84c7;
+  display: flex;
+  justify-content: center;
+}
+
+.aside-p {
   font-style: italic;
+  font-weight: 400;
+  font-size: 16px;
+  color: #5d9cec;
+  margin: 0;
+}
+
+@media (max-width: 440px) {
+  .quantity-p {
+    font-size: 10px;
+  }
+
+  .title-quantity {
+    font-size: 12px;
+  }
 }

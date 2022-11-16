@@ -1,30 +1,12 @@
-.container-card {
-  background-color: rgb(250, 244, 244);
+.card {
+  box-sizing: border-box;
+  position: absolute;
+  left: 13.31%;
+  right: 20.31%;
+  top: 22.29%;
+  bottom: 22.14%;
+  background: rgba(209, 220, 227, 0.18);
+  border: 1px solid #d1dce3;
+  border-radius: 4px;
   display: flex;
-  flex-direction: column;
-  height: 500px;
-  width: 450px;
-  justify-items: flex-start;
-}
-
-.title-text {
-  font-size: 30px;
-  margin-top: 50px;
-  color: black;
-  font-weight: 700;
-}
-
-.label-card {
-  color: rgb(88, 88, 88);
-  font-size: 20px;
-  font-weight: 600;
-}
-
-.input-card {
-  width: 300px;
-  margin-left: 80px;
-  height: 32px;
-  border-radius: 6px;
-  margin-bottom: 35px;
-  margin-top: 4px;
 }

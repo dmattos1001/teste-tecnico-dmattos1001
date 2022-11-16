@@ -1,20 +1,27 @@
 /* eslint-disable no-unused-vars */
-import styles from "./styles.css"
+import styles from "./styles.css";
 
-function Aside() {
-  
+const Aside = () => {
   return (
-    <>
-    <div className="container-days">
-
-      <h3 className="title-day">VOCÊ RECEBERÁ: </h3>
-      <h4 className="days">Amanhã: </h4>
-      <h4 className="days">Em 15 dias: </h4>
-      <h4 className="days">Em 30 dias: </h4>
-      <h4 className="days">Em 90 dias:</h4>
+    <div className="aside-container">
+      <div className="container-text">
+        <h4 className="aside-title">Você receberá:</h4>
+        <div className="line"></div>
+        <p className="aside-p">
+          Amanhã: <b>R$ 0,00</b>
+        </p>
+        <p className="aside-p">
+          Em 15 dias: <b>R$ 0,00</b>
+        </p>
+        <p className="aside-p">
+          Em 30 dias: <b>R$ 0,00</b>
+        </p>
+        <p className="aside-p">
+          Em 90 dias: <b>R$ 0,00</b>
+        </p>
+      </div>
     </div>
-    </>
   );
-}
+};
 
 export default Aside;
