@@ -1,13 +1,19 @@
 /* eslint-disable no-unused-vars */
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import "./styles.css";
+import axios from "axios";
 
 import api from "../../api";
 
-const Inputs = () => {
+const Inputs = ({ setDados }) => {
+  const [result, setResult] = useState(false);
+
+  const history = useHistory();
+
   const formSchema = yup.object().shape({
     amount: yup.number(),
     installments: yup.number(),
@@ -18,13 +24,31 @@ const Inputs = () => {
     resolver: yupResolver(formSchema),
   });
 
-  function calculate(data) {
-    api
-      .post(data)
+  function apiInternalError() {
+    axios
+      .post("https://frontend-challenge-7bu3nxh76a-uc.a.run.app?internalError")
       .then((response) => {
         console.log(response);
       })
       .catch((err) => console.log(err));
+  }
+
+  function calculate(data) {
+    setResult(true);
+    axios
+      .post(
+        "https://frontend-challenge-7bu3nxh76a-uc.a.run.app?delay=4000",
+        data
+      )
+      .then((response) => {
+        console.log(response.data);
+        setDados(response.data);
+        setResult(false);
+      })
+      .catch((err) => {
+        apiInternalError();
+        history.push("/error");
+      });
   }
 
   return (
@@ -64,6 +88,18 @@ const Inputs = () => {
             className="input-style"
             type="number"
           ></input>
+        </div>
+
+        <div className="container-button">
+          {result === false ? (
+            <button className="button-enviar" type="submit">
+              Enviar
+            </button>
+          ) : (
+            <button disabled className="button-enviar">
+              ...Enviar
+            </button>
+          )}
         </div>
       </div>
     </form>

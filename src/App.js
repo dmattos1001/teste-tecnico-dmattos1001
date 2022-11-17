@@ -1,17 +1,26 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 import "./App.css";
-import Card from "./components/Card";
-import Body from "./components/Body";
-import Aside from "./components/Aside";
-import { useEffect, useState } from "react";
-import Inputs from "./components/Inputs";
 import Calculadora from "./page/index";
+import { Switch, Route } from "react-router-dom";
+import Error from "./page/error";
 
 function App() {
-  const [days, setDays] = useState([]);
+  
 
-  return <Calculadora />;
+  return (
+    <Switch>
+
+      <Route exact path={"/"}>
+      <Calculadora />
+      </Route>
+
+      <Route path={"/error"}>
+        <Error />
+      </Route>
+
+    </Switch>
+  );
 }
 
 export default App;

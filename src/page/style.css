@@ -1,0 +1,14 @@
+.container-error-page {
+  background-color: rgb(221, 225, 225);
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-voltar {
+  background-color: rgb(235, 184, 102);
+  height: 30px;
+  width: 70px;
+  border-radius: 4px;
+}
