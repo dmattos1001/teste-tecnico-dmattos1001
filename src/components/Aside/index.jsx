@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import styles from "./styles.css";
 
-const Aside = (dados) => {
+const Aside = ({ dados }) => {
   return (
     <div className="aside-container">
       <div className="container-text">
